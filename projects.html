@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<!--
+	Design based on "Forty" by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>Projects | Ruben Codes</title>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript
+            ><link rel="stylesheet" href="assets/css/noscript.css"
+        /></noscript>
+    </head>
+    <body class="is-preload">
+        <!-- Wrapper -->
+        <div id="wrapper">
+            <!-- Header -->
+            <header id="header">
+                <a href="index.html" class="logo"
+                    ><strong>rubencodes</strong> <span>.fyi</span></a
+                >
+                <nav>
+                    <a href="#menu">Menu</a>
+                </nav>
+            </header>
+
+            <!-- Menu -->
+            <nav id="menu">
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                </ul>
+            </nav>
+
+            <!-- Main -->
+            <div id="main">
+                <section id="projects-intro">
+                    <div class="inner">
+                        <header class="major">
+                            <h1>Projects</h1>
+                        </header>
+                        <p>A running log of things I've built and broken, sorted by discipline.</p>
+                    </div>
+                </section>
+
+                <!-- Tabs -->
+                <section id="projects-tabs">
+                    <div class="inner">
+                        <div class="tab-nav" role="tablist">
+                            <button
+                                class="tab-link active"
+                                role="tab"
+                                aria-selected="true"
+                                aria-controls="tab-ai"
+                                data-tab="tab-ai"
+                            >
+                                AI Pipelines
+                            </button>
+                            <button
+                                class="tab-link"
+                                role="tab"
+                                aria-selected="false"
+                                aria-controls="tab-devops"
+                                data-tab="tab-devops"
+                            >
+                                DevOps
+                            </button>
+                            <button
+                                class="tab-link"
+                                role="tab"
+                                aria-selected="false"
+                                aria-controls="tab-security"
+                                data-tab="tab-security"
+                            >
+                                Security
+                            </button>
+                        </div>
+
+                        <div class="tab-panels">
+                            <div
+                                class="tab-panel active"
+                                id="tab-ai"
+                                role="tabpanel"
+                            >
+                                <div class="project-cards">
+                                    <article class="project-card">
+                                        <h3>What is an AI pipeline?</h3>
+                                        <p>
+                                            An AI pipeline is the set of steps
+                                            wrapped around a raw model call:
+                                            gathering context, shaping the
+                                            prompt, invoking the model,
+                                            validating the output, and acting
+                                            on the result. A model by itself
+                                            just answers a question. A
+                                            pipeline turns that answer into a
+                                            product — one that's grounded,
+                                            checked, repeatable, and cheap to
+                                            run at scale.
+                                        </p>
+                                        <p>
+                                            Skip the pipeline and you've built
+                                            a toy. Build one, and you've built
+                                            a system that holds up under real
+                                            traffic and real data.
+                                        </p>
+                                    </article>
+                                    <article class="project-card">
+                                        <h3>Why a real AI pipeline beats a bare LLM call</h3>
+                                        <p>
+                                            A raw prompt-in, text-out call is
+                                            fine for a demo, but production
+                                            workloads need more. Here's where
+                                            the real gains come from:
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                <strong>RAG (Retrieval-Augmented Generation)</strong>
+                                                — grounds model answers in
+                                                your own docs and data,
+                                                fetched live at query time.
+                                                Cuts hallucination and avoids
+                                                costly retraining every time
+                                                the data changes.
+                                            </li>
+                                            <li>
+                                                <strong>ICL (In-Context Learning)</strong>
+                                                — few-shot examples steer
+                                                model behavior on the fly. No
+                                                fine-tuning job, no GPU bill —
+                                                just swap examples per use
+                                                case in seconds.
+                                            </li>
+                                            <li>
+                                                <strong>Tool use / function calling</strong>
+                                                — lets the model reach out to
+                                                APIs, databases, and
+                                                calculators instead of
+                                                guessing. Turns a "chatbot"
+                                                into an agent that actually
+                                                gets things done.
+                                            </li>
+                                            <li>
+                                                <strong>Caching &amp; embeddings store</strong>
+                                                — vector search reuses
+                                                precomputed embeddings and
+                                                avoids redundant model calls.
+                                                Faster answers, smaller bills.
+                                            </li>
+                                            <li>
+                                                <strong>Guardrails &amp; eval loop</strong>
+                                                — structured output checks and
+                                                regression evals catch drift
+                                                before your users do.
+                                            </li>
+                                        </ul>
+                                        <p>
+                                            Stack these right and the pipeline
+                                            delivers accurate answers, fresh
+                                            knowledge, lower cost per query,
+                                            and behavior you can actually
+                                            reason about.
+                                        </p>
+                                    </article>
+                                    <article class="project-card project-card-wide">
+                                        <h3>Support chatbot: pipeline vs. direct calls</h3>
+                                        <p>
+                                            Same use case, two builds. One
+                                            calls the model directly with the
+                                            user's message. The other wraps
+                                            that call in a pipeline. Here's
+                                            how they hold up:
+                                        </p>
+                                        <div class="table-wrapper">
+                                            <table class="alt">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Concern</th>
+                                                        <th>Direct LLM call</th>
+                                                        <th>With pipeline</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Answer accuracy</td>
+                                                        <td>
+                                                            Model guesses from
+                                                            training data.
+                                                            Confident-sounding
+                                                            wrong answers about
+                                                            your product.
+                                                        </td>
+                                                        <td>
+                                                            RAG pulls your
+                                                            actual docs and
+                                                            ticket history
+                                                            before answering.
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Staying current</td>
+                                                        <td>
+                                                            Product changes
+                                                            mean stale
+                                                            answers until you
+                                                            edit the prompt or
+                                                            retrain.
+                                                        </td>
+                                                        <td>
+                                                            Update the source
+                                                            docs, retrieval
+                                                            picks it up on the
+                                                            next query.
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Tone &amp; format</td>
+                                                        <td>
+                                                            Inconsistent
+                                                            without heavy
+                                                            prompt tuning per
+                                                            edge case.
+                                                        </td>
+                                                        <td>
+                                                            ICL examples keep
+                                                            tone and structure
+                                                            consistent across
+                                                            ticket types.
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Taking action</td>
+                                                        <td>
+                                                            Can describe how
+                                                            to reset a
+                                                            password, can't do
+                                                            it.
+                                                        </td>
+                                                        <td>
+                                                            Tool calls hit the
+                                                            account API and
+                                                            actually reset it.
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Cost at volume</td>
+                                                        <td>
+                                                            Every repeat
+                                                            question re-runs
+                                                            the full model
+                                                            call.
+                                                        </td>
+                                                        <td>
+                                                            Cached embeddings
+                                                            and retrieval
+                                                            short-circuit
+                                                            repeat questions.
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Failure handling</td>
+                                                        <td>
+                                                            Bad output ships
+                                                            straight to the
+                                                            user, no one
+                                                            notices.
+                                                        </td>
+                                                        <td>
+                                                            Guardrails and
+                                                            evals catch
+                                                            malformed or
+                                                            off-policy replies
+                                                            before send.
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+
+                            <div
+                                class="tab-panel"
+                                id="tab-devops"
+                                role="tabpanel"
+                                hidden
+                            >
+                                <div class="project-cards">
+                                    <article class="project-card">
+                                        <h3>Coming soon</h3>
+                                        <p>
+                                            Infrastructure, CI/CD, and
+                                            monitoring projects will show up
+                                            here.
+                                        </p>
+                                    </article>
+                                </div>
+                            </div>
+
+                            <div
+                                class="tab-panel"
+                                id="tab-security"
+                                role="tabpanel"
+                                hidden
+                            >
+                                <div class="project-cards">
+                                    <article class="project-card">
+                                        <h3>Coming soon</h3>
+                                        <p>
+                                            Security tooling and research will
+                                            show up here.
+                                        </p>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <div class="inner">
+                    <ul class="copyright">
+                        <li>&copy; rubencodes</li>
+                        <li>
+                            Design: <a href="https://html5up.net">HTML5 UP</a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/tabs.js"></script>
+    </body>
+</html>

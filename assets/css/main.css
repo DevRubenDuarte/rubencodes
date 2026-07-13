@@ -4141,3 +4141,102 @@ body.is-menu-visible #menu .inner {
     opacity: 1;
     visibility: visible;
 }
+
+/* Tabs */
+
+.tab-nav {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    border-bottom: solid 1px rgba(212, 212, 255, 0.1);
+    margin: 0 0 2em 0;
+}
+
+.tab-link {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 0;
+    border-bottom: solid 2px transparent;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.9em;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: -1px;
+    padding: 0.75em 1.25em;
+    text-transform: uppercase;
+    -moz-transition:
+        color 0.2s ease-in-out,
+        border-color 0.2s ease-in-out;
+    -webkit-transition:
+        color 0.2s ease-in-out,
+        border-color 0.2s ease-in-out;
+    -ms-transition:
+        color 0.2s ease-in-out,
+        border-color 0.2s ease-in-out;
+    transition:
+        color 0.2s ease-in-out,
+        border-color 0.2s ease-in-out;
+}
+
+.tab-link:hover {
+    color: #ffffff;
+}
+
+.tab-link.active {
+    border-bottom-color: #9bf1ff;
+    color: #9bf1ff;
+}
+
+.tab-panel:not(.active) {
+    display: none;
+}
+
+.project-cards {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -1em;
+}
+
+.project-card {
+    background-color: rgba(212, 212, 255, 0.035);
+    border: solid 1px rgba(212, 212, 255, 0.1);
+    margin: 0 1em 2em 1em;
+    padding: 2em;
+    width: calc(100% - 2em);
+}
+
+.project-card h3 {
+    color: #ffffff;
+    font-size: 1.1em;
+    margin: 0 0 0.5em 0;
+}
+
+.project-card p {
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+@media screen and (max-width: 736px) {
+    .tab-nav {
+        -moz-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .tab-link {
+        padding: 0.75em 1em;
+    }
+}
