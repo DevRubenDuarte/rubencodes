@@ -72,15 +72,6 @@
                             >
                                 DevOps
                             </button>
-                            <button
-                                class="tab-link"
-                                role="tab"
-                                aria-selected="false"
-                                aria-controls="tab-security"
-                                data-tab="tab-security"
-                            >
-                                Security
-                            </button>
                         </div>
 
                         <div class="tab-panels">
@@ -295,28 +286,114 @@
                             >
                                 <div class="project-cards">
                                     <article class="project-card">
-                                        <h3>Coming soon</h3>
+                                        <h3>What is a DevOps pipeline?</h3>
                                         <p>
-                                            Infrastructure, CI/CD, and
-                                            monitoring projects will show up
-                                            here.
+                                            A DevOps pipeline is the set of
+                                            automated steps that take a code
+                                            change from commit to running in
+                                            production: build, test,
+                                            provision infrastructure, deploy,
+                                            and monitor. Do this by hand and
+                                            every release depends on someone
+                                            remembering the right sequence of
+                                            steps. Automate it, and every
+                                            release is the same release,
+                                            every time.
+                                        </p>
+                                        <p>
+                                            Skip the pipeline and you've got
+                                            a person as a single point of
+                                            failure. Build one, and you've
+                                            got a system that ships fast
+                                            without breaking things.
                                         </p>
                                     </article>
-                                </div>
-                            </div>
-
-                            <div
-                                class="tab-panel"
-                                id="tab-security"
-                                role="tabpanel"
-                                hidden
-                            >
-                                <div class="project-cards">
                                     <article class="project-card">
-                                        <h3>Coming soon</h3>
+                                        <h3>Why a real DevOps pipeline beats manual ops</h3>
                                         <p>
-                                            Security tooling and research will
-                                            show up here.
+                                            SSH-ing in and running commands by
+                                            hand works until it doesn't.
+                                            Here's where the real gains come
+                                            from:
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                <strong>CI/CD</strong>
+                                                — every commit is built,
+                                                tested, and deployed the same
+                                                way. No more "works on my
+                                                machine," no more manual
+                                                deploy steps someone forgets.
+                                            </li>
+                                            <li>
+                                                <strong>Infrastructure as Code</strong>
+                                                — environments defined in
+                                                version-controlled config, not
+                                                hand-clicked in a console.
+                                                Spin up a match of prod in
+                                                minutes, review infra changes
+                                                like code changes.
+                                            </li>
+                                            <li>
+                                                <strong>Observability</strong>
+                                                — metrics, logs, and traces
+                                                wired in from the start.
+                                                Catch a regression from a
+                                                dashboard, not from a customer
+                                                complaint.
+                                            </li>
+                                            <li>
+                                                <strong>Secrets &amp; config management</strong>
+                                                — credentials pulled from a
+                                                vault at deploy time, not
+                                                hardcoded or passed around in
+                                                Slack.
+                                            </li>
+                                            <li>
+                                                <strong>Automated rollback &amp; canary releases</strong>
+                                                — bad deploy gets caught and
+                                                reverted automatically, before
+                                                it reaches every user.
+                                            </li>
+                                        </ul>
+                                        <p>
+                                            Stack these right and the
+                                            pipeline delivers faster ships,
+                                            fewer 2am pages, infrastructure
+                                            you can reproduce on demand, and
+                                            deploys you can actually trust.
+                                        </p>
+                                    </article>
+                                    <article class="project-card">
+                                        <h3>The outage you haven't had yet</h3>
+                                        <p>
+                                            Somewhere in your org, a deploy
+                                            is happening right now that
+                                            depends on one person doing the
+                                            right thing in the right order.
+                                            No pipeline catches it if they
+                                            don't. It ships anyway, and the
+                                            first person to notice is a
+                                            customer.
+                                        </p>
+                                        <p>
+                                            That's not a hypothetical, it's
+                                            the default state of every team
+                                            that hasn't automated yet. The
+                                            fix isn't more discipline or a
+                                            longer checklist. It's removing
+                                            the human step where the failure
+                                            lives.
+                                        </p>
+                                        <p>
+                                            I build the pipeline so that
+                                            "someone forgot" stops being a
+                                            root cause. Every deploy, every
+                                            environment, every rollback,
+                                            handled the same way, every
+                                            time — whether it's 2pm on a
+                                            Tuesday or 2am during an
+                                            incident.
                                         </p>
                                     </article>
                                 </div>
