@@ -1,429 +1,127 @@
 <!DOCTYPE html>
-<!--
-	Design based on "Forty" by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-    <head>
-        <title>Projects | Ruben Codes</title>
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, user-scalable=no"
-        />
-        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <noscript
-            ><link rel="stylesheet" href="assets/css/noscript.css"
-        /></noscript>
-    </head>
-    <body class="is-preload">
-        <!-- Wrapper -->
-        <div id="wrapper">
-            <!-- Header -->
-            <header id="header">
-                <a href="index.html" class="logo"
-                    ><strong>rubencodes</strong> <span>.fyi</span></a
-                >
-                <nav>
-                    <a href="#menu">Menu</a>
-                </nav>
-            </header>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Projects | Ruben Codes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #1a1e33; color: #ffffff; font-family: 'Work Sans', Helvetica, sans-serif; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: #9bf1ff; color: #1a1e33; }
+  header { display:flex; align-items:center; justify-content:space-between; padding: 2em 3em; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .logo { font-size: 1.2em; font-weight: 700; font-family: 'Space Grotesk', sans-serif; }
+  .logo span { opacity:0.45; }
+  nav { display:flex; gap: 2.5em; font-size: 0.75em; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; }
+  nav a.active { color:#9bf1ff; }
+  nav a:not(.active) { opacity:0.6; }
+  .intro { padding: 4.5em 3em 1em; max-width: 900px; margin: 0 auto; }
+  .eyebrow { font-size: 0.75em; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: #9bf1ff; margin: 0 0 1.25em; }
+  h1 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 2.6em; line-height: 1.1; margin: 0 0 0.5em; }
+  .intro p.sub { font-size: 1em; font-weight: 300; opacity: 0.7; margin: 0; }
+  .tabs-wrap { padding: 3em 3em 6em; max-width: 1000px; margin: 0 auto; }
+  .tab-nav { display:flex; gap: 0.5em; margin-bottom: 2.5em; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .tab-link { background:none; border:0; cursor:pointer; font-family:'Space Grotesk',sans-serif; padding: 0.9em 1.6em; font-size: 0.9em; font-weight: 700; color: #ffffff; box-shadow: inset 0 -2px 0 rgba(255,255,255,0.12); opacity: 0.5; }
+  .tab-link.active { box-shadow: inset 0 -2px 0 #9bf1ff; opacity: 1; }
+  .tags { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.6em; margin-bottom: 3em; }
+  .tags div { text-align:center; padding: 0.9em; background: #14172a; font-size: 0.8em; font-weight: 600; letter-spacing: 0.05em; }
+  .cases { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25em; }
+  .case { padding: 2em; background: #14172a; border-left: 4px solid #9bf1ff; }
+  .case .stat { font-size: 0.72em; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #9bf1ff; margin: 0 0 0.75em; }
+  .case h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.25em; font-weight: 700; margin: 0 0 0.6em; }
+  .case p { font-size: 0.9em; font-weight: 300; opacity: 0.75; line-height: 1.6; margin: 0; }
+  .tab-panel[hidden] { display:none; }
+  footer { padding: 3em; border-top: solid 1px rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center; flex-wrap: wrap; gap: 1em; font-size: 0.85em; }
+  footer p { margin:0; opacity: 0.5; }
+  .foot-links { display:flex; gap: 1.5em; opacity: 0.75; }
+</style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">rubencodes<span>.fyi</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-            <!-- Menu -->
-            <nav id="menu">
-                <ul class="links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                </ul>
-            </nav>
+  <section class="intro">
+    <p class="eyebrow">Selected Work</p>
+    <h1>Projects</h1>
+    <p class="sub">Selected DevOps and AI pipeline work — real systems, in production.</p>
+  </section>
 
-            <!-- Main -->
-            <div id="main">
-                <section id="projects-intro">
-                    <div class="inner">
-                        <header class="major">
-                            <h1>Projects</h1>
-                        </header>
-                        <p>If your company needs a leverage over your competitors in these fields, I can help you push through the noise.</p>
-                    </div>
-                </section>
+  <section class="tabs-wrap">
+    <div class="tab-nav" role="tablist">
+      <button class="tab-link active" role="tab" aria-selected="true" aria-controls="tab-ai" data-tab="tab-ai">AI Pipelines</button>
+      <button class="tab-link" role="tab" aria-selected="false" aria-controls="tab-devops" data-tab="tab-devops">DevOps</button>
+    </div>
 
-                <!-- Tabs -->
-                <section id="projects-tabs">
-                    <div class="inner">
-                        <div class="tab-nav" role="tablist">
-                            <button
-                                class="tab-link active"
-                                role="tab"
-                                aria-selected="true"
-                                aria-controls="tab-ai"
-                                data-tab="tab-ai"
-                            >
-                                AI Pipelines
-                            </button>
-                            <button
-                                class="tab-link"
-                                role="tab"
-                                aria-selected="false"
-                                aria-controls="tab-devops"
-                                data-tab="tab-devops"
-                            >
-                                DevOps
-                            </button>
-                        </div>
-
-                        <div class="tab-panels">
-                            <div
-                                class="tab-panel active"
-                                id="tab-ai"
-                                role="tabpanel"
-                            >
-                                <div class="project-cards">
-                                    <article class="project-card">
-                                        <h3>What is an AI pipeline?</h3>
-                                        <p>
-                                            An AI pipeline is the set of steps
-                                            wrapped around a raw model call:
-                                            gathering context, shaping the
-                                            prompt, invoking the model,
-                                            validating the output, and acting
-                                            on the result. A model by itself
-                                            just answers a question. A
-                                            pipeline turns that answer into a
-                                            product — one that's grounded,
-                                            checked, repeatable, and cheap to
-                                            run at scale.
-                                        </p>
-                                        <p>
-                                            Skip the pipeline and you've built
-                                            a toy. Build one, and you've built
-                                            a system that holds up under real
-                                            traffic and real data.
-                                        </p>
-                                    </article>
-                                    <article class="project-card">
-                                        <h3>Why a real AI pipeline beats a bare LLM call</h3>
-                                        <p>
-                                            A raw prompt-in, text-out call is
-                                            fine for a demo, but production
-                                            workloads need more. Here's where
-                                            the real gains come from:
-                                        </p>
-                                        <ul>
-                                            <li>
-                                                <strong>RAG (Retrieval-Augmented Generation)</strong>
-                                                — grounds model answers in
-                                                your own docs and data,
-                                                fetched live at query time.
-                                                Cuts hallucination and avoids
-                                                costly retraining every time
-                                                the data changes.
-                                            </li>
-                                            <li>
-                                                <strong>ICL (In-Context Learning)</strong>
-                                                — few-shot examples steer
-                                                model behavior on the fly. No
-                                                fine-tuning job, no GPU bill —
-                                                just swap examples per use
-                                                case in seconds.
-                                            </li>
-                                            <li>
-                                                <strong>Tool use / function calling</strong>
-                                                — lets the model reach out to
-                                                APIs, databases, and
-                                                calculators instead of
-                                                guessing. Turns a "chatbot"
-                                                into an agent that actually
-                                                gets things done.
-                                            </li>
-                                            <li>
-                                                <strong>Caching &amp; embeddings store</strong>
-                                                — vector search reuses
-                                                precomputed embeddings and
-                                                avoids redundant model calls.
-                                                Faster answers, smaller bills.
-                                            </li>
-                                            <li>
-                                                <strong>Guardrails &amp; eval loop</strong>
-                                                — structured output checks and
-                                                regression evals catch drift
-                                                before your users do.
-                                            </li>
-                                        </ul>
-                                        <p>
-                                            Stack these right and the pipeline
-                                            delivers accurate answers, fresh
-                                            knowledge, lower cost per query,
-                                            and behavior you can actually
-                                            reason about.
-                                        </p>
-                                    </article>
-                                    <article class="project-card">
-                                        <h3>Support chatbot: pipeline vs. direct calls</h3>
-                                        <p>
-                                            Same use case, two builds. One
-                                            calls the model directly with the
-                                            user's message. The other wraps
-                                            that call in a pipeline. Here's
-                                            how they hold up:
-                                        </p>
-                                        <div class="table-wrapper">
-                                            <table class="alt">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Concern</th>
-                                                        <th>Direct LLM call</th>
-                                                        <th>With pipeline</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Answer accuracy</td>
-                                                        <td>
-                                                            Model guesses from
-                                                            training data.
-                                                            Confident-sounding
-                                                            wrong answers about
-                                                            your product.
-                                                        </td>
-                                                        <td>
-                                                            RAG pulls your
-                                                            actual docs and
-                                                            ticket history
-                                                            before answering.
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Staying current</td>
-                                                        <td>
-                                                            Product changes
-                                                            mean stale
-                                                            answers until you
-                                                            edit the prompt or
-                                                            retrain.
-                                                        </td>
-                                                        <td>
-                                                            Update the source
-                                                            docs, retrieval
-                                                            picks it up on the
-                                                            next query.
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Tone &amp; format</td>
-                                                        <td>
-                                                            Inconsistent
-                                                            without heavy
-                                                            prompt tuning per
-                                                            edge case.
-                                                        </td>
-                                                        <td>
-                                                            ICL examples keep
-                                                            tone and structure
-                                                            consistent across
-                                                            ticket types.
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Taking action</td>
-                                                        <td>
-                                                            Can describe how
-                                                            to reset a
-                                                            password, can't do
-                                                            it.
-                                                        </td>
-                                                        <td>
-                                                            Tool calls hit the
-                                                            account API and
-                                                            actually reset it.
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Cost at volume</td>
-                                                        <td>
-                                                            Every repeat
-                                                            question re-runs
-                                                            the full model
-                                                            call.
-                                                        </td>
-                                                        <td>
-                                                            Cached embeddings
-                                                            and retrieval
-                                                            short-circuit
-                                                            repeat questions.
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Failure handling</td>
-                                                        <td>
-                                                            Bad output ships
-                                                            straight to the
-                                                            user, no one
-                                                            notices.
-                                                        </td>
-                                                        <td>
-                                                            Guardrails and
-                                                            evals catch
-                                                            malformed or
-                                                            off-policy replies
-                                                            before send.
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </article>
-                                </div>
-                            </div>
-
-                            <div
-                                class="tab-panel"
-                                id="tab-devops"
-                                role="tabpanel"
-                                hidden
-                            >
-                                <div class="project-cards">
-                                    <article class="project-card">
-                                        <h3>What is a DevOps pipeline?</h3>
-                                        <p>
-                                            A DevOps pipeline is the set of
-                                            automated steps that take a code
-                                            change from commit to running in
-                                            production: build, test,
-                                            provision infrastructure, deploy,
-                                            and monitor. Do this by hand and
-                                            every release depends on someone
-                                            remembering the right sequence of
-                                            steps. Automate it, and every
-                                            release is the same release,
-                                            every time.
-                                        </p>
-                                        <p>
-                                            Skip the pipeline and you've got
-                                            a person as a single point of
-                                            failure. Build one, and you've
-                                            got a system that ships fast
-                                            without breaking things.
-                                        </p>
-                                    </article>
-                                    <article class="project-card">
-                                        <h3>Why a real DevOps pipeline beats manual ops</h3>
-                                        <p>
-                                            SSH-ing in and running commands by
-                                            hand works until it doesn't.
-                                            Here's where the real gains come
-                                            from:
-                                        </p>
-                                        <ul>
-                                            <li>
-                                                <strong>CI/CD</strong>
-                                                — every commit is built,
-                                                tested, and deployed the same
-                                                way. No more "works on my
-                                                machine," no more manual
-                                                deploy steps someone forgets.
-                                            </li>
-                                            <li>
-                                                <strong>Infrastructure as Code</strong>
-                                                — environments defined in
-                                                version-controlled config, not
-                                                hand-clicked in a console.
-                                                Spin up a match of prod in
-                                                minutes, review infra changes
-                                                like code changes.
-                                            </li>
-                                            <li>
-                                                <strong>Observability</strong>
-                                                — metrics, logs, and traces
-                                                wired in from the start.
-                                                Catch a regression from a
-                                                dashboard, not from a customer
-                                                complaint.
-                                            </li>
-                                            <li>
-                                                <strong>Secrets &amp; config management</strong>
-                                                — credentials pulled from a
-                                                vault at deploy time, not
-                                                hardcoded or passed around in
-                                                Slack.
-                                            </li>
-                                            <li>
-                                                <strong>Automated rollback &amp; canary releases</strong>
-                                                — bad deploy gets caught and
-                                                reverted automatically, before
-                                                it reaches every user.
-                                            </li>
-                                        </ul>
-                                        <p>
-                                            Stack these right and the
-                                            pipeline delivers faster ships,
-                                            fewer 2am pages, infrastructure
-                                            you can reproduce on demand, and
-                                            deploys you can actually trust.
-                                        </p>
-                                    </article>
-                                    <article class="project-card">
-                                        <h3>The outage you haven't had yet</h3>
-                                        <p>
-                                            Somewhere in your org, a deploy
-                                            is happening right now that
-                                            depends on one person doing the
-                                            right thing in the right order.
-                                            No pipeline catches it if they
-                                            don't. It ships anyway, and the
-                                            first person to notice is a
-                                            customer.
-                                        </p>
-                                        <p>
-                                            That's not a hypothetical, it's
-                                            the default state of every team
-                                            that hasn't automated yet. The
-                                            fix isn't more discipline or a
-                                            longer checklist. It's removing
-                                            the human step where the failure
-                                            lives.
-                                        </p>
-                                        <p>
-                                            I build the pipeline so that
-                                            "someone forgot" stops being a
-                                            root cause. Every deploy, every
-                                            environment, every rollback,
-                                            handled the same way, every
-                                            time — whether it's 2pm on a
-                                            Tuesday or 2am during an
-                                            incident.
-                                        </p>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <!-- Footer -->
-            <footer id="footer">
-                <div class="inner">
-                    <ul class="copyright">
-                        <li>&copy; rubencodes</li>
-                        <li>
-                            Design: <a href="https://html5up.net">HTML5 UP</a>
-                        </li>
-                    </ul>
-                </div>
-            </footer>
+    <div id="tab-ai" class="tab-panel" role="tabpanel">
+      <div class="tags">
+        <div>RAG</div><div>ICL</div><div>Tool use</div><div>Evals</div>
+      </div>
+      <div class="cases">
+        <div class="case">
+          <p class="stat">Faster ticket triage</p>
+          <h3>Cut support triage with AI agents</h3>
+          <p>Built an internal RAG + MCP-powered ticketing system linking support data and AI agents directly into engineering workflows — cut manual triage by grounding agent answers in real data.</p>
         </div>
+        <div class="case">
+          <p class="stat">Adaptive lessons, live checks</p>
+          <h3>Teach PT–EN with adaptive AI</h3>
+          <p>Built a Portuguese–English learning platform using in-context learning to adapt lessons on the fly and tool calling to check answers and pull live examples.</p>
+        </div>
+      </div>
+    </div>
 
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.scrolly.min.js"></script>
-        <script src="assets/js/jquery.scrollex.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
-        <script src="assets/js/tabs.js"></script>
-    </body>
+    <div id="tab-devops" class="tab-panel" role="tabpanel" hidden>
+      <div class="tags">
+        <div>CI/CD</div><div>IaC</div><div>Observability</div><div>Secrets</div><div>Rollback</div>
+      </div>
+      <div class="cases">
+        <div class="case">
+          <p class="stat">40% lower node cost</p>
+          <h3>Cut EKS infra costs 40%</h3>
+          <p>Migrated the platform to EKS with Karpenter autoscaling and OpenTofu-managed infrastructure — cut node costs 40% via ARM64 and spot workloads, removed manual provisioning.</p>
+        </div>
+        <div class="case">
+          <p class="stat">Downtime cut to seconds</p>
+          <h3>Cut downtime to seconds a month</h3>
+          <p>Replaced manual deploys with GitOps (ArgoCD + Traefik) across 12+ microservices — cut website downtime to seconds per month, no single-person bottleneck.</p>
+        </div>
+        <div class="case">
+          <p class="stat">One CI/CD pattern, not many</p>
+          <h3>Harden secrets, standardize CI/CD</h3>
+          <p>Hardened secrets management with SOPS/KMS and standardized CI/CD on CodeBuild across services — fewer deploy-time inconsistencies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© Ruben Duarte</p>
+    <div class="foot-links">
+      <a href="mailto:rubencodes@proton.me">Email</a>
+      <a href="https://github.com/devrubenduarte">GitHub</a>
+      <a href="https://www.linkedin.com/in/devruben">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.tab-link').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.tab-link').forEach(function (b) { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
+        document.querySelectorAll('.tab-panel').forEach(function (p) { p.hidden = true; });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        document.getElementById(btn.dataset.tab).hidden = false;
+      });
+    });
+  </script>
+</body>
 </html>

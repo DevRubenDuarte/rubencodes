@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contact | Ruben Codes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #1a1e33; color: #ffffff; font-family: 'Work Sans', Helvetica, sans-serif; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: #9bf1ff; color: #1a1e33; }
+  header { display:flex; align-items:center; justify-content:space-between; padding: 2em 3em; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .logo { font-size: 1.2em; font-weight: 700; font-family: 'Space Grotesk', sans-serif; }
+  .logo span { opacity:0.45; }
+  nav { display:flex; gap: 2.5em; font-size: 0.75em; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; }
+  nav a.active { color:#9bf1ff; }
+  nav a:not(.active) { opacity:0.6; }
+  main { padding: 5.5em 3em 6em; max-width: 700px; margin: 0 auto; }
+  .eyebrow { font-size: 0.75em; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: #9bf1ff; margin: 0 0 1.25em; }
+  h1 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 2.6em; line-height: 1.1; margin: 0 0 0.5em; }
+  main > p { font-size: 1em; font-weight: 300; opacity: 0.7; line-height: 1.65; margin: 0 0 2.5em; }
+  .links { display:flex; flex-direction: column; gap: 0.6em; }
+  .links a { display:flex; justify-content:space-between; align-items:center; padding: 1.5em 1.75em; background: #14172a; border-left: 4px solid #9bf1ff; }
+  .links a .label { font-family:'Space Grotesk',sans-serif; font-weight:700; }
+  .links a .value { opacity:0.7; }
+  footer { padding: 3em; border-top: solid 1px rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center; flex-wrap: wrap; gap: 1em; font-size: 0.85em; }
+  footer p { margin:0; opacity: 0.5; }
+  .foot-links { display:flex; gap: 1.5em; opacity: 0.75; }
+</style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">rubencodes<span>.fyi</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <p class="eyebrow">Get in touch</p>
+    <h1>Contact</h1>
+    <p>If your company needs leverage over your competitors in AI or DevOps, get in touch.</p>
+    <div class="links">
+      <a href="mailto:rubencodes@proton.me"><span class="label">Email</span><span class="value">rubencodes@proton.me</span></a>
+      <a href="https://github.com/devrubenduarte"><span class="label">GitHub</span><span class="value">devrubenduarte</span></a>
+      <a href="https://www.linkedin.com/in/devruben"><span class="label">LinkedIn</span><span class="value">in/devruben</span></a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© Ruben Duarte</p>
+    <div class="foot-links">
+      <a href="mailto:rubencodes@proton.me">Email</a>
+      <a href="https://github.com/devrubenduarte">GitHub</a>
+      <a href="https://www.linkedin.com/in/devruben">LinkedIn</a>
+    </div>
+  </footer>
+</body>
+</html>
