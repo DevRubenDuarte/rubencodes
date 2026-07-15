@@ -26,13 +26,25 @@
   .tab-nav { display:flex; gap: 0.5em; margin-bottom: 2.5em; border-bottom: 1px solid rgba(255,255,255,0.08); }
   .tab-link { background:none; border:0; cursor:pointer; font-family:'Space Grotesk',sans-serif; padding: 0.9em 1.6em; font-size: 0.9em; font-weight: 700; color: #ffffff; box-shadow: inset 0 -2px 0 rgba(255,255,255,0.12); opacity: 0.5; }
   .tab-link.active { box-shadow: inset 0 -2px 0 #9bf1ff; opacity: 1; }
-  .tags { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.6em; margin-bottom: 3em; }
-  .tags div { text-align:center; padding: 0.9em; background: #14172a; font-size: 0.8em; font-weight: 600; letter-spacing: 0.05em; }
+  .diagram-intro { margin-bottom: 2em; }
+  .diagram-intro .tag { font-size: 0.72em; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #9bf1ff; margin: 0 0 0.5em; }
+  .diagram-intro h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.25em; font-weight: 700; margin: 0 0 0.4em; }
+  .diagram-intro .hint { font-size: 0.85em; font-weight: 300; opacity: 0.6; margin: 0 0 1.75em; }
+  .step-row { display:flex; flex-wrap: wrap; align-items: stretch; gap: 0.4em; margin-bottom: 1.5em; }
+  .step-wrap { display:flex; align-items:center; gap: 0.4em; }
+  .step-btn { cursor:pointer; font-family:'Work Sans',sans-serif; text-align:left; padding: 1em 1.25em; background: #14172a; border: 1px solid rgba(255,255,255,0.1); color: #ffffff; width: 168px; }
+  .step-btn.active { background: #1e2a4a; border-color: #9bf1ff; }
+  .step-btn .idx { display:block; font-size: 0.68em; font-weight: 700; letter-spacing: 0.1em; color: #9bf1ff; margin-bottom: 0.35em; }
+  .step-btn .lbl { display:block; font-size: 0.9em; font-weight: 600; line-height: 1.3; }
+  .arrow { opacity:0.35; font-size:1.1em; }
+  .step-detail { padding: 1.75em 2em; background: #14172a; border-left: 4px solid #9bf1ff; }
+  .step-detail .tag { font-size: 0.72em; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #9bf1ff; margin: 0 0 0.6em; }
+  .step-detail p.body { font-size: 0.9em; font-weight: 300; opacity: 0.8; line-height: 1.6; margin: 0; white-space: pre-line; }
   .cases { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25em; }
   .case { padding: 2em; background: #14172a; border-left: 4px solid #9bf1ff; }
   .case .stat { font-size: 0.72em; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #9bf1ff; margin: 0 0 0.75em; }
   .case h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.25em; font-weight: 700; margin: 0 0 0.6em; }
-  .case p { font-size: 0.9em; font-weight: 300; opacity: 0.75; line-height: 1.6; margin: 0; }
+  .case p { font-size: 0.9em; font-weight: 300; opacity: 0.75; line-height: 1.6; margin: 0; white-space: pre-line; }
   .tab-panel[hidden] { display:none; }
   footer { padding: 3em; border-top: solid 1px rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center; flex-wrap: wrap; gap: 1em; font-size: 0.85em; }
   footer p { margin:0; opacity: 0.5; }
@@ -62,42 +74,52 @@
     </div>
 
     <div id="tab-ai" class="tab-panel" role="tabpanel">
-      <div class="tags">
-        <div>RAG</div><div>ICL</div><div>Tool use</div><div>Evals</div>
-      </div>
-      <div class="cases">
-        <div class="case">
-          <p class="stat">Faster ticket triage</p>
-          <h3>Cut support triage with AI agents</h3>
-          <p>Built an internal RAG + MCP-powered ticketing system linking support data and AI agents directly into engineering workflows — cut manual triage by grounding agent answers in real data.</p>
-        </div>
-        <div class="case">
-          <p class="stat">Adaptive lessons, live checks</p>
-          <h3>Teach PT–EN with adaptive AI</h3>
-          <p>Built a Portuguese–English learning platform using in-context learning to adapt lessons on the fly and tool calling to check answers and pull live examples.</p>
+      <div class="diagram-intro">
+        <p class="tag">Faster ticket triage</p>
+        <h3>Cut support triage with AI agents</h3>
+        <p class="hint">Click a step to see what it does.</p>
+        <div class="step-row" id="step-row"></div>
+        <div class="step-detail">
+          <p class="tag" id="step-title"></p>
+          <p class="body" id="step-body"></p>
         </div>
       </div>
+      <div class="cases"></div>
     </div>
 
     <div id="tab-devops" class="tab-panel" role="tabpanel" hidden>
-      <div class="tags">
-        <div>CI/CD</div><div>IaC</div><div>Observability</div><div>Secrets</div><div>Rollback</div>
-      </div>
       <div class="cases">
         <div class="case">
           <p class="stat">40% lower node cost</p>
           <h3>Cut EKS infra costs 40%</h3>
-          <p>Migrated the platform to EKS with Karpenter autoscaling and OpenTofu-managed infrastructure — cut node costs 40% via ARM64 and spot workloads, removed manual provisioning.</p>
+          <p>Migrated the platform to EKS with Karpenter autoscaling and OpenTofu-managed infrastructure: 
+cut node costs 40% via ARM64 and spot workloads, removed manual provisioning.</p>
+        </div>
+        <div class="case">
+          <p class="stat">Self-serve, auditable releases</p>
+          <h3>Replace manual deploys with GitOps</h3>
+          <p>Replace manual deploys with GitOps (ArgoCD + Traefik) across 12+ microservices:
+teams ship and audit their own releases, no single-person bottleneck.</p>
         </div>
         <div class="case">
           <p class="stat">Downtime cut to seconds</p>
           <h3>Cut downtime to seconds a month</h3>
-          <p>Replaced manual deploys with GitOps (ArgoCD + Traefik) across 12+ microservices — cut website downtime to seconds per month, no single-person bottleneck.</p>
+          <p>Use ArgoCD self-healing rollouts so a replacement pod is confirmed healthy before its predecessor is ever taken down, cutting website downtime to seconds per month.</p>
+        </div>
+        <div class="case">
+          <p class="stat">Encrypted at rest</p>
+          <h3>Harden secrets with SOPS/KMS</h3>
+          <p>Hardened secrets management with SOPS/KMS across services, removing plaintext credentials from repos and deploy pipelines.</p>
         </div>
         <div class="case">
           <p class="stat">One CI/CD pattern, not many</p>
-          <h3>Harden secrets, standardize CI/CD</h3>
-          <p>Hardened secrets management with SOPS/KMS and standardized CI/CD on CodeBuild across services — fewer deploy-time inconsistencies.</p>
+          <h3>Standardize CI/CD on CodeBuild</h3>
+          <p>Standardized CI/CD on CodeBuild across services, leading to fewer deploy-time inconsistencies.</p>
+        </div>
+        <div class="case">
+          <p class="stat">Issues caught before users notice</p>
+          <h3>Add observability across services</h3>
+          <p>Set up metrics, logs, and alerting across all services, surfacing incidents before customers report them instead of finding out after the fact.</p>
         </div>
       </div>
     </div>
@@ -113,6 +135,43 @@
   </footer>
 
   <script>
+    var steps = [
+      { id: "intake", label: "Ticket in", body: "The client reaches out for support. \nListeners check your inbound queues (be them an email inbox, a database insert, a webhook directly on your site), triggering the pipeline.\nData goes through a normalization step to prepare it for triage." },
+      { id: "triage", label: "Triage (Classification)", body: "The ticket body is analyzed, passed through a spam detector, assigned a priority level, and sent to a queue according to the topic (general, payments, complaints, technical, etc) " },
+      { id: "retrieve", label: "Retrieve (RAG)", body: "The system searches internal docs, past tickets, and code history to pull grounding relevant to this specific issue before any answer is drafted." },
+      { id: "tools", label: "Tool calls (MCP)", body: "The agent calls out via MCP to live systems — logs, deploy status, database records — instead of guessing from static context. " },
+      { id: "draft", label: "Draft + evidence", body: "A draft response is generated with the supporting evidence attached, so a human reviewer can verify it in seconds rather than researching and creating a draft from scratch." },
+      { id: "route", label: "Route / resolve", body: "The ticket is auto-routed to the right support technician, with a full audit trail of what the agent checked and why." },
+      { id: "escalation", label: "Escalation trigger", body: "An SLA timer watches every open ticket — if one sits too long without resolution, it's automatically escalated to a human or manager instead of stalling in queue." },
+      { id: "feedback", label: "Feedback loop", body: "Once resolved, the outcome — accepted, edited, or rejected — feeds back into the system to improve future retrieval and drafts." }
+    ];
+    var activeStep = "intake";
+
+    function renderSteps() {
+      var row = document.getElementById('step-row');
+      row.innerHTML = '';
+      steps.forEach(function (s, i) {
+        var wrap = document.createElement('div');
+        wrap.className = 'step-wrap';
+        var btn = document.createElement('button');
+        btn.className = 'step-btn' + (s.id === activeStep ? ' active' : '');
+        btn.innerHTML = '<span class="idx">0' + (i + 1) + '</span><span class="lbl">' + s.label + '</span>';
+        btn.addEventListener('click', function () { activeStep = s.id; renderSteps(); });
+        wrap.appendChild(btn);
+        if (i < steps.length - 1) {
+          var arrow = document.createElement('span');
+          arrow.className = 'arrow';
+          arrow.textContent = '→';
+          wrap.appendChild(arrow);
+        }
+        row.appendChild(wrap);
+      });
+      var step = steps.find(function (s) { return s.id === activeStep; });
+      document.getElementById('step-title').textContent = step.label;
+      document.getElementById('step-body').textContent = step.body;
+    }
+    renderSteps();
+
     document.querySelectorAll('.tab-link').forEach(function (btn) {
       btn.addEventListener('click', function () {
         document.querySelectorAll('.tab-link').forEach(function (b) { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
